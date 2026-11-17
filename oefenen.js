@@ -17,3 +17,15 @@ document.querySelector("#tel").addEventListener("click", function () {
     document.querySelector("#stand").textContent =
         aantal + " keer geklikt";
 });
+document.querySelector("#groet").addEventListener("click", function () {
+    const naam = document.querySelector("#invoer").value.trim();
+
+    if (naam === "") {
+        document.querySelector("#uitvoer").textContent =
+            "Vul eerst je naam in.";
+        return;
+    }
+
+    document.querySelector("#uitvoer").textContent =
+        "Hallo " + naam + "!";
+});
