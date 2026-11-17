@@ -18,14 +18,25 @@ document.querySelector("#tel").addEventListener("click", function () {
         aantal + " keer geklikt";
 });
 document.querySelector("#groet").addEventListener("click", function () {
-    const naam = document.querySelector("#invoer").value.trim();
+    const oefening = document.querySelector("#invoer").value.trim();
 
-    if (naam === "") {
+    if (oefening === "") {
         document.querySelector("#uitvoer").textContent =
-            "Vul eerst je naam in.";
+            "Vul eerst een oefening in.";
         return;
     }
 
-    document.querySelector("#uitvoer").textContent =
-        "Hallo " + naam + "!";
+    const item = document.createElement("li");
+
+    item.textContent = oefening;
+
+    document.querySelector("#lijst").append(item);
+
+    document.querySelector("#invoer").value = "";
+
+    document.querySelector("#uitvoer").textContent = "";
+});
+
+document.querySelector("#wissen").addEventListener("click", function () {
+    document.querySelector("#lijst").replaceChildren();
 });
