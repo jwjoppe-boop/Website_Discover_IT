@@ -9,3 +9,11 @@ const knop = document.querySelector("#wissel");
 knop.addEventListener("click", function () {
     kaart.classList.toggle("uitgelicht");
 });
+let aantal = 0;
+
+document.querySelector("#tel").addEventListener("click", function () {
+    aantal = aantal + 1;
+
+    document.querySelector("#stand").textContent =
+        aantal + " keer geklikt";
+});
