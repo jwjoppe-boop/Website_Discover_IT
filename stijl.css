@@ -69,3 +69,14 @@ p {
 .uitgelicht {
     background-color: lightblue;
 }
+.kaart input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.kaart button {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
